@@ -6,16 +6,16 @@ $$
 f(x)=\sum_{i=1}^{n/2}(-13+x_{2i-1}+((5-x_{2i})x_{2i}-2)x_{2i})^2+(-29+x_{2i-1}+((x_{2i}+1)x_{2i}-14)x_{2i})^2.
 $$
 
-I used `optimtool.unconstrain` to search local minma, got an efficient experience about searching the nearest minimum point. Add a mechanism to jump out of the local area would increase the runtime of the whole script, so `porgo` is a new progam to accelerate to search global minma.
+I used `optimtool.unconstrain` to search local minima, got an efficient experience about searching the nearest minimum point. Add a mechanism to jump out of the local area would increase the runtime of the whole script, so `porgo` is a new progam to accelerate to search global minima.
 
-refer to [test.py](./test.py) and the global minma of 4-dimensional $f(x)$ is (5, 4, 5, 4).
+refer to [test.py](./test.py) and the global minima of 4-dimensional $f(x)$ is (5, 4, 5, 4).
 
 ## glos
 
 glos is the main runtime to serve as a global search class, users can run train_gen module with given cycles at any times until the function searching process converged.
 
 init:
-- objective_function: *Callable*, a high-dimensional function with convex, non-convex, and many local minma.
+- objective_function: *Callable*, a high-dimensional function with convex, non-convex, and many local minima.
 - bounds: *List[List[float]] | List[Tuple[float]]*, changes this value makes a significant influence of best and best_fit.
 - mutation: *float=0.5*, increase this value makes the search radius larger.
 - recombination: *float=0.9*, increase this value allows larger number of mutation.
