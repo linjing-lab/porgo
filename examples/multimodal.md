@@ -9,8 +9,8 @@ multimodal = porgo.glos(multimodal_function, bounds) # mutation=0.5, recombinati
 multimodal.rand_pop(100) # init population
 for i in range(3): # if need to execute 3 times
     multimodal.train_gen(1000)
-multimodal.result() # must be executed
-print(multimodal.best, multimodal.best_fit) # the best converged result
+    multimodal.result() # must be executed
+    print(multimodal.best, multimodal.best_fit) # the best converged result
 
 '''
 (array([1.74453074e-09,  3.97957495e-09, -1.02597317e-09,  2.87045889e-09, -2.40535489e-09, 

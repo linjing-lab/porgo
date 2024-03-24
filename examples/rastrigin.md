@@ -9,8 +9,8 @@ rastrigin = porgo.glos(rastrigin_function, bounds) # mutation=0.5, recombination
 rastrigin.rand_pop(100) # init population
 for i in range(3): # if need to execute 3 times
     rastrigin.train_gen(1000)
-rastrigin.result() # must be executed
-print(rastrigin.best, rastrigin.best_fit) # the best converged result
+    rastrigin.result() # must be executed
+    print(rastrigin.best, rastrigin.best_fit) # the best converged result
 
 '''
 (array([-2.39950764e-09,  2.89384641e-09, -1.82451894e-09, -3.00804257e-09, 2.06450184e-09, 
