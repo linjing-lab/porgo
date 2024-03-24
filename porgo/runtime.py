@@ -19,6 +19,8 @@ class glos:
         assert recombination > 0 and recombination < 1
         self.obj = objective_function
         self.scale = len(bounds) # the dimension of objective_function
+        assert self.scale > 0
+        assert all(map(lambda x: isinstance(x, (List, Tuple)), bounds))
         if not isinstance(bounds, NUMPY_NDARRAY):
             self.bounds = numpy.array(bounds)
         self.F = mutation
@@ -58,6 +60,7 @@ class glos:
         :param population_size: int. the size of population. default: 50.
         :param verbose: bool. whether to output initial population. default: False.
         '''
+        assert population_size > 0
         self.population_size: int = population_size
         self.uniform = numpy.random.uniform(self.bounds[:,0], self.bounds[:,1], (self.population_size, self.scale)) # relace with another initial pattern
         if verbose:
@@ -68,6 +71,7 @@ class glos:
         Configure the numbers of generations to accelerate convergence.
         :param cycles: int. set the times of train_gen. default: 1000.
         '''
+        assert cycles > 0
         for _ in range(cycles): 
             self._evo_pop()
 
