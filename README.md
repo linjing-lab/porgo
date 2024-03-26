@@ -8,7 +8,7 @@ $$
 
 I used `optimtool.unconstrain` to search local minima, got an efficient experience about searching the nearest minimum point. Add a mechanism to jump out of the local area would increase the runtime of the whole script, so `porgo` is a new progam to accelerate to search global minima.
 
-refer to [test.py](./test.py) and the global minima of 4-dimensional $f(x)$ is (5, 4, 5, 4).
+refer to test.py and the global minima of 4-dimensional $f(x)$ is (5, 4, 5, 4).
 
 ## glos
 
