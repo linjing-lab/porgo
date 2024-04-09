@@ -23,6 +23,7 @@ class glos:
         assert all(map(lambda x: isinstance(x, (List, Tuple)), bounds))
         if not isinstance(bounds, NUMPY_NDARRAY):
             self.bounds = numpy.array(bounds)
+        assert numpy.all(self.bounds[:,0] < self.bounds[:,1]), 'Search bounds use the form as [[-10, 10]] * 3 or [(-10, 10)] * 3.'
         self.F = mutation
         self.CR = recombination
 
@@ -62,7 +63,7 @@ class glos:
         '''
         assert population_size > 0
         self.population_size: int = population_size
-        self.uniform = numpy.random.uniform(self.bounds[:,0], self.bounds[:,1], (self.population_size, self.scale)) # relace with another initial pattern
+        self.uniform = numpy.random.uniform(self.bounds[:,0], self.bounds[:,1], (self.population_size, self.scale)) # replace with another initial pattern
         if verbose:
             print(self.uniform)
 
