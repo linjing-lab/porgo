@@ -16,7 +16,7 @@ glos is the main runtime to serve as a global search class, users can run train_
 
 init:
 - objective_function: *Callable*, a high-dimensional function with convex, non-convex, and many local minima.
-- bounds: *List[List[float]] | List[Tuple[float]]*, changes this value makes a significant influence of best and best_fit.
+- bounds: *List[List[float]] | List[Tuple[float]]*, changes this value makes a significant influence of mini and fit_mini.
 - mutation: *float=0.5*, increase this value makes the search radius larger.
 - recombination: *float=0.9*, increase this value allows larger number of mutation.
 
@@ -28,7 +28,7 @@ train_gen:
 - cycles: *int=1000*, try to run several times (until converged) when give a smaller cycle number if search bounds is in large space.
 
 result:
-- verbose: *bool=False*, whether to output console information after search populations were updated (check self.best and self.best_fit).
+- verbose: *bool=False*, whether to output console information after search populations were updated (check self.mini and self.fit_mini, the top3 updated results are (self.mini, self.fit_mini) < (self.medi, self.fit_medi) < (self.maxi, self.fit_maxi)).
 
 ## reference
 
