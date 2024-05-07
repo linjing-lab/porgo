@@ -78,13 +78,13 @@ class glos:
 
     def result(self, verbose: bool=False) -> None:
         '''
-        Find the best converged result or output console information with `verbose=True`.
+        Find the top 3 updated results or output console information with `verbose=True`.
         :param verbose: bool. whether to output console information with 'index point value'. default: False.
         '''
         if not verbose:
-            best_index = numpy.argmin([self.obj(updated) for updated in self.uniform])
-            self.best = self.uniform[best_index]
-            self.best_fit = self.obj(self.best)
+            top3_index = numpy.argsort([self.obj(updated) for updated in self.uniform])[:3]
+            self.mini, self.medi, self.maxi = self.uniform[top3_index]
+            self.fit_mini, self.fit_medi, self.fit_maxi = self.obj(self.mini), self.obj(self.medi), self.obj(self.maxi)
         else:
             for i, updated in enumerate(self.uniform):
                 print('{}\t{}\t{}'.format(i, updated, self.obj(updated)))
