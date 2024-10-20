@@ -79,7 +79,7 @@ class glos:
     def result(self, minimum: bool=False, verbose: bool=False) -> None:
         '''
         Find the top 3 updated results or output console information with `verbose=True`.
-        :param verbose: bool. whether to output first if struct with mini and fit_mini. default: False.
+        :param minimum: bool. whether to output first if struct with mini and fit_mini. default: False.
         :param verbose: bool. whether to output console information with 'index point value'. default: False.
         '''
         if not verbose:
@@ -87,7 +87,7 @@ class glos:
             self.mini, self.medi, self.maxi = self.uniform[top3_index]
             self.fit_mini, self.fit_medi, self.fit_maxi = self.obj(self.mini), self.obj(self.medi), self.obj(self.maxi)
             if minimum:
-                print("mini {}, fit_mini {}".format(self.mini, self.fit_mini))
+                print("{}, {}".format(self.mini, self.fit_mini))
         else:
             for i, updated in enumerate(self.uniform):
                 print('{}\t{}\t{}'.format(i, updated, self.obj(updated)))
