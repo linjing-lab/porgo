@@ -37,7 +37,7 @@ setup(
       zip_safe=False,
       setup_requires=['setuptools>=18.0', 'wheel'],
       project_urls={
-            'Source': 'https://github.com/linjing-lab/porgo/tree/master/porgo/',
+            'Source': 'https://github.com/linjing-lab/porgo/tree/main/porgo/',
             'Tracker': 'https://github.com/linjing-lab/porgo/issues',
       },
       classifiers=[
