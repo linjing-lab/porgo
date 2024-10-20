@@ -9,13 +9,8 @@ rastrigin = porgo.glos(rastrigin_function, bounds) # mutation=0.5, recombination
 rastrigin.rand_pop(100) # init population
 for i in range(3): # if need to execute 3 times
     rastrigin.train_gen(1000)
-    rastrigin.result() # must be executed
-    print(rastrigin.mini, rastrigin.fit_mini) # the best converged result
+    rastrigin.result(minimum=True) # must be executed
     # print('{} epoch, minimum {}, medium {}, maximum {}'.format(i, rastrigin.fit_mini, rastrigin.fit_medi, rastrigin.fit_maxi))
-'''
-(array([-2.39950764e-09,  2.89384641e-09, -1.82451894e-09, -3.00804257e-09, 2.06450184e-09, 
-        -1.23446967e-09,  9.17498501e-10,  3.33980914e-10, -1.62505039e-09, -3.78447686e-09]), 0.0)
-'''
 ```
 
 refer to [rastrigin.ipynb](../tests/rastrigin.ipynb).
