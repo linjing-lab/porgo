@@ -15,4 +15,4 @@ for i in range(6):
     test.result() # must be executed
     print('{} epoch, minimum {}, medium {}, maximum {}'.format(i, test.fit_mini, test.fit_medi, test.fit_maxi))
 print(test.mini, test.fit_mini) # equal to (test.best, self.best_fit) in v1.0.0 and v1.0.1
-# test.result(True)
+# test.result(verbose=True)

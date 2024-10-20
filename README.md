@@ -28,6 +28,7 @@ train_gen:
 - cycles: *int=1000*, try to run several times (until converged) when give a smaller cycle number if search bounds is in large space.
 
 result:
+- minimum: *bool=False*, whether to output mini and fit_mini after first if struct was executed.
 - verbose: *bool=False*, whether to output console information after search populations were updated (check self.mini and self.fit_mini, the top3 updated results are (self.mini, self.fit_mini) < (self.medi, self.fit_medi) < (self.maxi, self.fit_maxi)).
 
 ## reference
