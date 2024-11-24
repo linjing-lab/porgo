@@ -12,7 +12,7 @@ test = porgo.glos(objective_function, bounds) # mutation=0.5, recombination=0.9
 test.rand_pop(40)
 for i in range(6):
     test.train_gen(100)
-    test.result() # must be executed
+    test.result()
     print('{} epoch, minimum {}, medium {}, maximum {}'.format(i, test.fit_mini, test.fit_medi, test.fit_maxi))
 print(test.mini, test.fit_mini) # equal to (test.best, self.best_fit) in v1.0.0 and v1.0.1
 # test.result(verbose=True)

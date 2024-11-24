@@ -9,7 +9,7 @@ multimodal = porgo.glos(multimodal_function, bounds) # mutation=0.5, recombinati
 multimodal.rand_pop(100) # init population
 for i in range(3): # if need to execute 3 times
     multimodal.train_gen(1000)
-    multimodal.result(minimum=True) # must be executed
+    multimodal.result(minimum=True)
     # print('{} epoch, minimum {}, medium {}, maximum {}'.format(i, multimodal.fit_mini, multimodal.fit_medi, multimodal.fit_maxi))
 ```
 
