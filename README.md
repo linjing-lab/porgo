@@ -6,9 +6,9 @@ $$
 f(x)=\sum_{i=1}^{n/2}(-13+x_{2i-1}+((5-x_{2i})x_{2i}-2)x_{2i})^2+(-29+x_{2i-1}+((x_{2i}+1)x_{2i}-14)x_{2i})^2.
 $$
 
-I used `optimtool.unconstrain` to search local minima, got an efficient experience about searching the nearest minimum point. Add a mechanism to jump out of local area would increase runtime of whole script, so `porgo` is a new progam to accelerate to search global minima.
+I used `optimtool.unconstrain` to search local minima, got an efficient experience about unbound searching the nearest minimum point. Add a mechanism to jump out of local space would increase runtime of whole script, so `porgo` is a new progam to accelerate to search global minima within bounds space.
 
-refer to test.py and the global minima of 4-dimensional $f(x)$ is (5, 4, 5, 4).
+refer to test.py and global minima of 4-dimensional $f(x)$ in bounds search is (5, 4, 5, 4).
 
 ## glos
 
@@ -21,7 +21,7 @@ init:
 - recombination: *float=0.9*, increase this value allows larger number of mutation.
 
 rand_pop:
-- population_size: *int=50*, randomly init the population (or called initial points) with shape at (population, dimension).
+- population_size: *int=50*, randomly init the population (or initial distribution) with shape at (population, dimension).
 - verbose: *bool=False*, whether to output initial population when manually replace the random generated rule.
 
 train_gen:
