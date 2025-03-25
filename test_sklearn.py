@@ -16,7 +16,7 @@ def objective_function(x):
     C, gamma = 10 ** x[0], 10 ** x[1]
     estimator = SVC(C=C, gamma=gamma, random_state=0)
     cval = cross_val_score(estimator, data, targets, scoring='roc_auc', cv=3)
-    return 1 - cval.mean()
+    return 1 - cval.mean() # target
 bounds = [[-3, 2], [-4, -1]]
 
 test = porgo.glos(objective_function, bounds) # mutation=0.5, recombination=0.9
@@ -25,4 +25,4 @@ test.rand_pop(5)
 for i in range(2):
     test.train_gen(10)
     test.result(minimum=True)
-print('expC({}), expGamma {}, cval.mean() {}'.format(test.mini[0], test.mini[1], 1-test.fit_mini))
+print('Optimal solution contains expC({}), expGamma({}), accuracy({})'.format(test.mini[0], test.mini[1], 1-test.fit_mini))
