@@ -1,2 +1,5 @@
 numpy>=1.21.0
 bayesian_optimization>=1.4.3
+torch==2.1.0+cu121
+matplotlib>=3.10.5
+tqdm>=4.67.1
