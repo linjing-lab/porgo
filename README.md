@@ -35,6 +35,12 @@ result:
 
 Storn, R and Price, K, Differential Evolution - a Simple and Efficient Heuristic for Global Optimization over Continuous Spaces, Journal of Global Optimization, 1997, 11, 341 - 359.
 
+## eda
+
+Estimation of Distribution Algorithm for Binary Optimization with PyTorch.
+
+EDA method of [examples/eda/eda.py](./examples/eda/eda.py) is an algorithm for binary optimization, which used in maximize problems.
+
 ## LICENSE
 
 [MIT LICENSE](./LICENSE)
